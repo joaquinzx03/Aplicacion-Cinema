@@ -15,7 +15,7 @@ class Ventana:
         
         self.crear_frames()
     
-    def crear_frames(self):
+    def crear_frames(self) -> None:
         self.pantalla_ventana_1_num1 = tk.Frame(self.ventana_1, bg= "gray", width=400, height=400, relief= "groove", bd= 4)
         self.pantalla_ventana_1_num1.place(x= 0, y= 100)
 
@@ -60,7 +60,7 @@ class Ventana:
         self.tk_imagen = ImageTk.PhotoImage(self.imagen_pillow)
         return self.tk_imagen
         
-    def crear_etiquetas(self):
+    def crear_etiquetas(self) -> None:
         
         self.etiqueta_imagen = tk.Label(self.pantalla_ventana_1_num1, image= self.crear_imagen())
         self.etiqueta_imagen.pack()
@@ -80,7 +80,7 @@ class Ventana:
         
         self.crear_botones()
     
-    def crear_botones(self):
+    def crear_botones(self) -> None:
         self.boton0_ir_a_pantalla_3= tk.Button(self.ventana_1, bg= "gray", text= "boton compra (dirige a pantalla 3)", fg= "black", font= ("Arial", 15), relief= "groove", bd = 15, cursor="hand2")
         self.boton0_ir_a_pantalla_3.place(x=433, y=432)
         
@@ -88,7 +88,7 @@ class Ventana:
         self.boton1_ir_a_pantalla_1.place(x= 30, y= 15)
         
 
-def main():
+def main() -> None:
     ventana_1 = tk.Tk()
     Demostracion = Ventana(ventana_1)
     ventana_1.mainloop()
